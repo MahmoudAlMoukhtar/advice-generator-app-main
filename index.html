@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <title>Frontend Mentor | Advice generator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(150, 100%, 66%); }
+    #addAdviceBtn{
+      background-color: hsl(150, 100%, 66%) !important;
+      transition: 0.3s;
+    }
+    #addAdviceBtn:hover{
+      background-color: hsl(150, 100%, 66%) !important;
+      box-shadow: 0px 0px 15px 1px hsl(150, 100%, 66%) !important;
+    }
+    #headerNote{
+      color: hsl(150, 100%, 66%);
+    }
+    #main-box{
+      max-width: 400px;
+      min-width: 300px !important;
+    }
+    @media screen and (max-width: 500px) {
+      #main-box{
+      max-width: 400px;
+      min-width: 300px !important;
+    }
+      main{
+        padding: 0 30px !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-800">
+  
+    <main class="container px-24 mx-auto my-16 flex flex-col justify-center items-center h-96">
+      <div id="main-box" class="min-h-60 container px-4 pt-6 mx-auto bg-gray-700 rounded-md flex flex-col justify-center items-center text-center">
+        <div id="content" class="flex flex-col gap-y-6">
+            <h4 id="headerNote" class="text-green-400">Advice #<span id="id-note"></span></h4>
+        <div id="description">
+            <p id="advice" class="text-white">
+              "This is a simple app that generates advice for you to use."
+            </p>
+          </div>
+              <img src="./images/pattern-divider-mobile.svg" alt="">
+            <div class="">
+              <button id="addAdviceBtn" class="rounded-full translate-y-4 p-3 bg-green-400  hover:bg-green-300" onclick="getAdvice()">
+                <img src="./images/icon-dice.svg" alt="" class=" w-4 mx-auto">
+              </button>
+            </div>
+            
+        </div>
+      </div>
+    </main>
+  <div class="attribution text-white">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+<script src="./main.js"></script>
+</html>
